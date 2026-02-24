@@ -47,4 +47,4 @@ An interactive, Java-based simulation tool designed to visualize and analyze key
 * [cite_start]Developing a **Mobile Application** version for on-the-go analysis[cite: 128].
 
 ---
-**Developed with ❤️ by Prateek**
+**Developed with ❤️ by Prateek, Manish and Aditya **
