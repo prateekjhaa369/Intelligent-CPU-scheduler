@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'npm install'
+                bat 'javac CPUScheduler.java'
             }
         }
         stage('Build Docker Image') {
@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Run Container') {
             steps {
-                bat 'docker run -d -p 3000:3000 devops-app'
+                bat 'docker run --rm devops-app'
             }
         }
     }
