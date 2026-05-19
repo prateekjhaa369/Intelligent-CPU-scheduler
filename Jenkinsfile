@@ -1,24 +1,24 @@
 pipeline {
     agent any
     stages {
-        stage('Clone') {
+        stage('Checkout') {
             steps {
-                git 'https://github.com/<username>/<project>.git'
+                echo 'Source already checked out by Jenkinsfile SCM'
             }
         }
         stage('Build') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t devops-app .'
+                bat 'docker build -t devops-app .'
             }
         }
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 3000:3000 devops-app'
+                bat 'docker run -d -p 3000:3000 devops-app'
             }
         }
     }
